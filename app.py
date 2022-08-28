@@ -9,6 +9,15 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
+logger = logging.getLogger("__name__")
+logging.basicConfig( level=logging.DEBUG)
+h1 = logging.StreamHandler(sys.stdout)
+h1.setLevel(logging.DEBUG)
+h2 = logging.StreamHandler(sys.stderr)
+h2.setLevel(logging.ERROR)
+
+logger.addHandler(h1)
+logger.addHandler(h2)
 
 def scale(payload):
     """Scales Payload"""
@@ -21,7 +30,6 @@ def scale(payload):
 @app.route("/")
 def home():
     html = f"<h3>Sklearn Prediction Home</h3>"
-    LOG.info(html)
     return html.format(format)
 
 @app.route("/predict", methods=['POST'])

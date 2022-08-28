@@ -13,8 +13,8 @@ kubectl run app --image=$dockerpath:latest --port=80
 
 # Step 3:
 # List kubernetes pods
-kubectl get nodes,deploy,rs,svc,pods
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward app --address 0.0.0.0 8000:80
+kubectl port-forward app --address 0.0.0.0 80:80
