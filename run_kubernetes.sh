@@ -4,15 +4,17 @@
 
 # Step 1:
 # This is your Docker ID/path
-# dockerpath=<>
+dockerpath=paakofiaidoo/app
 
 # Step 2
 # Run the Docker Hub container with kubernetes
+kubectl run app --image=$dockerpath:latest --port=80
 
 
 # Step 3:
 # List kubernetes pods
+kubectl get nodes,deploy,rs,svc,pods
 
 # Step 4:
 # Forward the container port to a host
-
+kubectl port-forward app --address 0.0.0.0 8000:80
