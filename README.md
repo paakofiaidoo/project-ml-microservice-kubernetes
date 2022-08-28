@@ -1,4 +1,4 @@
-<img src="./badge.png">
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/paakofiaidoo/project-ml-microservice-kubernetes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/paakofiaidoo/project-ml-microservice-kubernetes/tree/main)
 
 ## Project Summary
 
