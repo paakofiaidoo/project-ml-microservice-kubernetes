@@ -12,7 +12,7 @@ dockerpath=paakofiaidoo/app
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-# docker login
+docker login
 docker tag app $dockerpath
 
 # Step 3:

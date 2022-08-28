@@ -1,1 +1,11 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Error from server (AlreadyExists): pods "app" already exists
+NAME            STATUS   ROLES           AGE   VERSION
+node/minikube   Ready    control-plane   42m   v1.24.3
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   42m
+
+NAME      READY   STATUS    RESTARTS   AGE
+pod/app   1/1     Running   0          85s
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
